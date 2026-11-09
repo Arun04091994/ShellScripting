@@ -181,6 +181,36 @@ else
 fi
 
 
+8. or logical operator with if condition
+
+age = 60
+if [ "$age" -gt 18 ] || [ '$age' -lt 30 ] 
+then 
+  echo "valid age"
+else
+  echo "age not valid"
+fi
+
+2nd way
+
+age = 25
+if [ "$age" -gt 18 -o '$age' -lt 30 ] 
+then 
+  echo "valid age"
+else
+  echo "age not valid"
+fi
+
+3d way
+
+age = 25
+if [[ "$age" -gt 18 || '$age' -lt 30 ]]
+then 
+  echo "valid age"
+else
+  echo "age not valid"
+fi
+
 
 
 
