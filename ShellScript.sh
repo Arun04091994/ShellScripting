@@ -327,10 +327,55 @@ done
 
 ex:
 n=1
-while [ $n -le 10 ]
+while [ $n -le 10 ] #you can also use (( $n <= 10 ))
 do
   echo "$n"
+  n=$(( n+1 )) #you can also use n++ or ++n
 done
+
+ex2:
+n=1
+while [ $n -le 10 ] #you can also use (( $n <= 10 ))
+do
+  echo "$n"
+  n=$(( n+1 )) #you can also use n++ or ++n
+  sleep 2  ##prints each number after 2 seconds
+done
+
+ex3:
+ex:
+n=1
+while [ $n -le 10 ] #you can also use (( $n <= 10 ))
+do
+  echo "$n"
+  n=$(( n+1 )) #you can also use n++ or ++n
+  gnome-terminal & ##you can also use "xterm &" to open three terminals
+done
+
+15. read files using while loop
+
+type1:
+while read p
+do
+  echo $p
+done < hello.sh
+
+type2:
+cat hello.sh | while read p
+do
+  echo $p
+done
+
+type3:
+while IFS= read -r line #r prevents backslash escape from being interpretent. you can also use IFS=' '. IFS stands for internal field separator.
+do
+  echo $line
+done < hello.sh
+
+16. 
+
+
+
 
 
 
