@@ -254,6 +254,68 @@ echo "scale=2;3^3" | bc -l
 
 man bc --> to check manual
 
+11. case statements
+format:
+case expression in
+  pattern1 )
+    statements ;;
+  pattern2 )
+    statements ;;
+  ...
+esac
+
+ex:
+vehicle=$1
+case $vehicle in
+  "car" )
+    echo "rent of $vehicle is 100 dollar" ;;
+  "van" )
+    echo "rent of $vehicle is 80 dollar" ;;
+  "bicycle" )
+    echo "rent of $vehicle is 5 dollar" ;;
+  "truck" )
+    echo "rent of $vehicle is 150 dollar;;
+  *  )
+    echo "unknown vehicle" ;;
+esac
+
+12. example for case statement
+echo -e "enter some character : \c"
+read value
+case $value in
+  [a-z] )
+    echo "user entered $value a to z" ;;
+  [A-Z] )
+    echo "user entered $value A to Z" ;;
+  [0-9] )
+    echo "user entered $value 0 to 9" ;; 
+  ? )
+    echo "user entered $value special character" ;;
+  * )
+    echo "user entered $value A to Z" ;;
+esac
+
+note: set below if you are getting incorrect output
+LANG=C --> LANG environment variable indicates the language and encoding
+
+13. arrays in shall sscripting
+
+ex
+os=('ubuntu' 'windows' 'kali')
+echo "${os[@]}"
+echo "${os[0]}"
+echo "${!os[@]}"
+echo "${#os[@]}" --> length of the array
+os[3]='mac' --> adding element
+unset os[2] --> removing element from the array
+
+string=yuyuyuyccf
+echo "${string[@]}"
+echo "${string[0]}"
+echo "${string[1]}"
+echo "${#string[@]}"
+
+
 
 
 
