@@ -390,6 +390,48 @@ do
 done
 
 
+17. for loops
+syntax:
+for var in 1 2 3 4 ....N
+do
+  command1
+  command2
+  commandN
+done
+
+ex:
+for i in 1 2 3 4 5 #{1..10} or {1..10..2} to increment with two numbers
+do
+  echo $i
+done
+
+ex2:
+for (( i=0; i<5; i++ ))
+do 
+  echo $i
+done
+
+18.for loop use cases
+ex:
+for command in ls pwd date
+do
+  echo ".......$command....."
+  $command
+done
+
+ex2: checking directory or not
+for item in *
+do
+  if [ -d $item ] # -f for checking files
+  then
+    echo $item
+  fi
+done
+
+
+
+
+
 
 
 
