@@ -315,6 +315,23 @@ echo "${string[0]}"
 echo "${string[1]}"
 echo "${#string[@]}"
 
+14. while loops
+
+syntax:
+while [ condition ]
+do
+  command1
+  command2
+  command3
+done
+
+ex:
+n=1
+while [ $n -le 10 ]
+do
+  echo "$n"
+done
+
 
 
 
