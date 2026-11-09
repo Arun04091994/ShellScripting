@@ -211,6 +211,23 @@ else
   echo "age not valid"
 fi
 
+9. arithmatic operations in shell scripting
+
+num1=20
+num2=5
+
+echo $(( num1 + num2 ))
+echo $(( num1 - num2 ))
+echo $(( num1 * num2 ))
+echo $(( num1 / num2 ))
+echo $(( num1 % num2 ))
+
+2nd way
+echo $(expr $num1 + $num2 )
+echo $(expr $num1 - $num2 )
+echo $(expr $num1 \* $num2 ) --> escape should be used to fix error
+echo $(expr $num1 / $num2 )
+echo $(expr $num1 % $num2 )
 
 
 
