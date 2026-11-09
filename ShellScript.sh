@@ -372,7 +372,25 @@ do
   echo $line
 done < hello.sh
 
-16. 
+16. until loops will be executed till the statement becomes true.
+syntax:
+until [ condition ]
+do
+  command1
+  command2
+  ...
+done
+
+ex: 
+n=1
+until [ $n -ge 10 ] #you can use double parenthesis
+do
+  echo $n
+  n=$(( n+1 ))
+done
+
+
+
 
 
 
