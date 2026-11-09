@@ -229,7 +229,30 @@ echo $(expr $num1 \* $num2 ) --> escape should be used to fix error
 echo $(expr $num1 / $num2 )
 echo $(expr $num1 % $num2 )
 
+10. arithmatic operations on decimal numbers
+we should use bc --> basic calculations
 
+num1=20.5
+num2=5
+
+echo "20.5+5" | bc
+echo "20.5-5" | bc
+echo "20.5*" | bc
+echo "20.5/5" | bc
+echo "20.5%5" | bc
+
+for division
+echo "scale=2;20.5+5" | bc
+
+echo "$num1+$num2" | bc
+echo "$num1-$num2" | bc
+
+to find square root
+num=27
+echo "scale=2;sqrt($num)" | bc -l --> l is used to call math library
+echo "scale=2;3^3" | bc -l
+
+man bc --> to check manual
 
 
 
