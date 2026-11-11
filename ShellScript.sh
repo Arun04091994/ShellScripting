@@ -429,6 +429,52 @@ do
 done
 
 
+19. selectloop
+
+syntax:
+select variable_name in list
+do
+  command1
+  command2
+  ...
+done
+
+ex1:
+select name in mark john tom ben
+do
+  echo "$name selected"
+done
+
+select loop with case statement
+
+syntax:
+select name in mark john tom ben
+do
+  case "$name in
+    mark)
+     echo mark selected
+     ;;
+    john)
+     echo john selected
+     ;;
+    tom)
+     echo tom selected
+     ;;
+    ben)
+     echo ben selected
+     ;;
+    *)
+     echo "error please provide the number between 1 to 4"
+  esac
+done
+
+
+  
+  
+ 
+done
+
+
 
 
 
