@@ -561,7 +561,24 @@ else
   echo "file not found"
 fi
 
-24. 
+24. read only
+syntax:
+var=30
+readonly var
+var=50
+echo "var ==> $var"
+
+ex2:
+
+hello() {
+  echo "hello world"
+}
+readonly -f hello #in order to make function read only
+
+#readonly --> to check readonly variables, you can also use readonly -p
+#readonly --> to check readonly functions
+
+
 
 
 
