@@ -489,7 +489,60 @@ for ((i=1; i<=10; i++ ))
     echo "$i"
   done
 
-21. 
+21. functions
+syntax:
+  function name(){
+    commands
+  }
+
+  or
+
+  name () {
+    commands
+  }
+
+ex:
+function hello(){
+  echo "hello"
+}
+quit () {
+  exit
+}
+
+quit # this function quits the script
+hello #calling function
+echo "foo"
+
+passing arguments to the function
+ex:
+function print(){
+  echo $1 $2
+}
+
+print hello world
+
+22. local variables
+ex:
+
+function print(){
+  name = $1
+  echo "name is $1"
+}
+print max
+
+ex2:
+function print(){
+  local name = $1 #defining local variable
+  echo "name is $name"
+}
+
+name="tom"
+echo "name is $name: before"
+print max
+echo "name is $name: after"
+
+
+
   
 
 
