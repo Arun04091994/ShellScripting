@@ -541,6 +541,28 @@ echo "name is $name: before"
 print max
 echo "name is $name: after"
 
+23. check file exists or not using functions
+
+usage() {
+  echo "you need to provide an argument"
+  echo "usage : $0 filename"
+
+is_file_exists() {
+  local file="$!"
+  [[ -f "$file" ]] && return 0 || return 1
+}
+
+[[ $# -eq 0 ]] && usage
+
+if ( is_file_exist "$1")
+then
+  echo "file found"
+else
+  echo "file not found"
+fi
+
+24. 
+
 
 
   
