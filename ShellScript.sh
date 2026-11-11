@@ -578,6 +578,66 @@ readonly -f hello #in order to make function read only
 #readonly --> to check readonly variables, you can also use readonly -p
 #readonly --> to check readonly functions
 
+25. signals and traps
+
+ex:
+trap "echo exit command is detected" SIGINT #SIGKIll, SIGSTOP can't be trapped
+echo "pid is $$" #$$ is used to print pid of the script
+while (( count < 10 ))
+do
+  sleep 10
+  (( count ++ ))
+  echo $count
+done
+exit 0
+
+ex2:
+trap "echo exit command is detected" 0
+echo "hello world"
+exit 0
+
+ex3:
+create a file
+
+file=filepath
+trap "rm -f $file; exit" 0 2 15 #success control+C sigterm 
+echo "pid is $$" #$$ is used to print pid of the script
+while (( count < 10 ))
+do
+  sleep 10
+  (( count ++ ))
+  echo $count
+done
+exit 0
+
+now run " kill -15 pid" to check whether file is removed or not
+
+#trap --> to check list of traps
+
+##removing traps
+trap - 0 2 15 --> to remove traps
+
+24. debugging
+
+file=filepath
+trap "rm -f $file; exit" 0 2 15 #success control+C sigterm 
+echo "pid is $$" #$$ is used to print pid of the script
+while (( count < 10 ))
+do
+  sleep 10
+  (( count ++ ))
+  echo $count
+done
+exit 0
+
+#run " bash -x ./script.sh --> it will print everything or you can use "set -x" or "#!/bin/bash -x" on top of the script. "set +x" stops debugging
+
+
+
+
+
+
+
 
 
 
