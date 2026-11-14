@@ -32,7 +32,7 @@ String Comparisons:
 ---------------------------------
 =  compare if two strings are equal
 !=  compare if two strings are not equal
--n  evaluate if string length is greater than zero
+-n  evaluate if string length is not empty
 -z  evaluate if string length is equal to zero 
 
 Examples: 
@@ -82,14 +82,14 @@ then
   echo "condition is true"
 fi
 
-ex3: string comparison. you can use single = or double ==. 
+ex3: for string comparison you should usedouble ==. 
 word = abc
-if [ $word = "abc" ]
+if [ $word == "abc" ]
 then
   echo "condition is true"
 fi
 
-ex4.for > you need to use double square brasis.
+ex4.for > you need to use double square brasis when using symbol comparators
 word=a
 if [[ $word < "b" ]]
 then
