@@ -82,14 +82,14 @@ then
   echo "condition is true"
 fi
 
-ex3: for string comparison you should usedouble ==. 
+# ex3: for string comparison you should usedouble ==. 
 word = abc
 if [ $word == "abc" ]
 then
   echo "condition is true"
 fi
 
-ex4.for > you need to use double square brasis when using symbol comparators
+# ex4.for > you need to use double square brasis when using symbol comparators
 word=a
 if [[ $word < "b" ]]
 then
@@ -119,7 +119,7 @@ fi
 
 
 5. use case of if elif and else
-echo -e "enter the name of the file : \c" --> e is for interpretting the back slash
+echo -e "enter the name of the file : \c" --> e is for interpretting the back slash. it will keep the cursor in the same line
 read file_name
 
 #e flag is used to check whether file exists or not, 
