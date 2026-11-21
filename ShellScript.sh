@@ -304,7 +304,7 @@ ex
 os=('ubuntu' 'windows' 'kali')
 echo "${os[@]}"
 echo "${os[0]}"
-echo "${!os[@]}"
+echo "${!os[@]}" --> it will give position numbers of each array
 echo "${#os[@]}" --> length of the array
 os[3]='mac' --> adding element
 unset os[2] --> removing element from the array
@@ -505,6 +505,8 @@ ex:
 function hello(){
   echo "hello"
 }
+
+##quit block
 quit () {
   exit
 }
@@ -525,14 +527,14 @@ print hello world
 ex:
 
 function print(){
-  name = $1
+  name=$1
   echo "name is $1"
 }
 print max
 
 ex2:
 function print(){
-  local name = $1 #defining local variable
+  local name=$1 #defining local variable
   echo "name is $name"
 }
 
@@ -574,9 +576,10 @@ hello() {
   echo "hello world"
 }
 readonly -f hello #in order to make function read only
+hello
 
 #readonly --> to check readonly variables, you can also use readonly -p
-#readonly --> to check readonly functions
+#readonly -f --> to check readonly functions
 
 25. signals and traps
 
@@ -600,7 +603,7 @@ ex3:
 create a file
 
 file=filepath
-trap "rm -f $file; exit" 0 2 15 #success control+C sigterm 
+trap "rm -f $file; exit" 0 2 15 #success(exit 0) control+C(signal stop) sigterm(signal termination) 
 echo "pid is $$" #$$ is used to print pid of the script
 while (( count < 10 ))
 do
@@ -617,7 +620,7 @@ now run " kill -15 pid" to check whether file is removed or not
 ##removing traps
 trap - 0 2 15 --> to remove traps
 
-24. debugging
+26. debugging
 
 file=filepath
 trap "rm -f $file; exit" 0 2 15 #success control+C sigterm 
