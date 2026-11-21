@@ -1,1 +1,47 @@
+#commands learned
+ls
+touch
+man
+chmod
+pwd
+mkdir
+cd
+rm -rf
+nproc
+free
+top
+df
+
+usecases
+for monitoring resources on multiple vms
+
+ex:
+#####
+#author
+#date:
+#this scripts output the nodehealth
+#version v1
+######
+set -x --> for debugging
+df -Th
+free -g
+nproc
+
+commands used
+set -x --> debug
+set -e --> exit the script when there is error
+set -o pipefail
+ps -ef
+grep
+|
+
+ex: 
+ps -ef | grep amazon
+
+to get only process id of amazon
+ps -ef | grep amazon | awk -F" " '{print $2}' --> it is getting data of the 2nd column
+
+
+
+
 
