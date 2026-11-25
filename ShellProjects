@@ -41,6 +41,32 @@ ps -ef | grep amazon
 to get only process id of amazon
 ps -ef | grep amazon | awk -F" " '{print $2}' --> it is getting data of the 2nd column
 
+##add mobile commands###
+
+
+###cost optimization####
+https://gist.github.com/iam-veeramalla/00a8c20b5dfc637c2e40a52bad2b32c3
+
+#ai assistent##
+install "github copilot" extension
+
+1. give proper file name
+2. description --> provide more context
+like ##########
+     #create vpc
+     #create public subnet
+     #verify if user has AWS installed. user might be using windows, mac or linux
+     #verify aws is configured
+     ###########
+by using enter and tab you can write code
+select code control + I --> to ask copilot about the code or right click and explain
+
+./script.sh create --> to create resources
+./script.sh teardown --> to delete resources
+./script.sh delete --> to delete resources
+
+
+
 
 
 
