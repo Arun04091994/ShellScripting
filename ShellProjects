@@ -65,6 +65,32 @@ select code control + I --> to ask copilot about the code or right click and exp
 ./script.sh teardown --> to delete resources
 ./script.sh delete --> to delete resources
 
+####interview questions###
+1. commands you use: i use ls, cp, mv, mkdir, touch, vim, grep, top commands frequently
+2. write a script to list all processes
+3. write script to print errors from remote file. you can use curl and grep
+4. write script to print numbers divided by 3 and 5 and not 15(print even numbers, odd numbers, divisible by 3, print prime numbers)
+    for i in {1..100}; do
+    if ([ 'expr $i % 3' == 0 ] ||  [ 'expr $i % 5' == 0 ]) &&  [ 'expr $i % 15' !== 0 ]
+    then
+        echo $i
+     fi
+5. script to print in mississippi
+   x=mississippi
+   grep -o "s" <<<"$x" | wc -l
+6. debug
+    set -x
+7. crontab
+8. readonly 
+   read -r test.txt
+9. diff between softlink and hardlink
+10. break and continue
+11. types of loops and when to use
+12. is bash dynamic or static? dynamic
+13. network debug? traceroute google.com
+14. sort list of names in a file
+15. how will you manage logs of a system that generates uge log files everyday? using logrotate
+
 
 
 
